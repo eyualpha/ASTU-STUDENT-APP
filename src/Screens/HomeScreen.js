@@ -1,10 +1,13 @@
 import { StyleSheet, Text, View, Button } from "react-native";
 import React from "react";
 
-const HomeScreen = () => {
+const HomeScreen = ({navigation}) => {
   return (
     <View>
-      <Text>HomeScreen</Text>
+     <Button
+        title="Go to GPA Calculator"
+        onPress={() => navigation.navigate("GpaCalculator")}
+      />
     </View>
   );
 };
