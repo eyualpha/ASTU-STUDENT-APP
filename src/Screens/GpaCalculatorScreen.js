@@ -64,12 +64,69 @@ const GpaCalculator = () => {
   };
 
   return (
-    <View>
-      <Text>GpaCalculator</Text>
+    <View style={styles.container}>
+      <Text style={styles.title}>GPA Calculator</Text>
+      <FlatList
+        data={subjects}
+        renderItem={({ item }) => (
+          <View style={styles.subject}>
+            <TextInput
+              style={styles.input}
+              placeholder="Grade"
+              value={item.grade}
+              onChangeText={(value) =>
+                handleInputChange(item.id, "grade", value)
+              }
+            />
+            <TextInput
+              style={styles.input}
+              placeholder="Credit"
+              keyboardType="numeric"
+              value={item.credit}
+              onChangeText={(value) =>
+                handleInputChange(item.id, "credit", value)
+              }
+            />
+          </View>
+        )}
+        keyExtractor={(item) => item.id}
+      />
+      <Button title="Add Subject" onPress={addSubject} />
+      <Button title="Calculate GPA" onPress={calculateGpa} />
+      {gpa !== null && (
+        <Text style={styles.result}>Your GPA: {gpa.toFixed(2)}</Text>
+      )}
     </View>
   );
 };
 
 export default GpaCalculator;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    padding: 20,
+  },
+  title: {
+    fontSize: 24,
+    marginBottom: 20,
+    textAlign: "center",
+  },
+  subject: {
+    flexDirection: "row",
+    marginBottom: 10,
+  },
+  input: {
+    flex: 1,
+    borderWidth: 1,
+    borderColor: "#ccc",
+    margin: 5,
+    padding: 10,
+    borderRadius: 5,
+  },
+  result: {
+    marginTop: 20,
+    fontSize: 20,
+    textAlign: "center",
+  },
+});
