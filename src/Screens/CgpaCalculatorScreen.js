@@ -5,6 +5,7 @@ import {
   TextInput,
   Button,
   FlatList,
+  Alert,
 } from "react-native";
 import React, { useState } from "react";
 
@@ -41,6 +42,13 @@ const CgpaCalculator = () => {
       return semester;
     });
     setSemesters(updatedSemesters);
+  };
+  const resultHandler = () => {
+    if (cgpa.toFixed(2) == NaN) {
+      Alert.alert("Invaled Input!");
+    } else {
+      return cgpa.toFixed(2);
+    }
   };
   return (
     <View style={styles.container}>
