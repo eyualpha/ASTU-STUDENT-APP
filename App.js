@@ -1,11 +1,8 @@
-import { NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
+
 import { StatusBar } from "react-native";
-import Icon from "react-native-vector-icons/Ionicons";
 
 
 
-const Stack = createStackNavigator();
 
 export default function App() {
   return (
