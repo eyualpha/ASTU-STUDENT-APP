@@ -1,5 +1,12 @@
-import { StyleSheet, Text, View } from "react-native";
-import React from "react";
+import {
+  StyleSheet,
+  Text,
+  View,
+  TextInput,
+  Button,
+  FlatList,
+} from "react-native";
+import React, { useState } from "react";
 
 const CgpaCalculator = () => {
   const [semesters, setSemesters] = useState([
