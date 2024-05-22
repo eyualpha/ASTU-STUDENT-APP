@@ -1,7 +1,13 @@
-import { StyleSheet, Text, View } from "react-native";
-import React from "react";
+import {
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+  FlatList,
+} from "react-native";
+import React, { useState } from "react";
 
-const RuleRegulationData = [
+const rulesData = [
   {
     id: "1",
     title: "NO Smoking",
@@ -9,15 +15,73 @@ const RuleRegulationData = [
       "Smoking inside the university compound is strictly forbbiden!",
   },
 ];
-
-const RuleRegulation = () => {
+const ExpandableItem = ({ item, onToggle, expanded }) => {
   return (
-    <View>
-      <Text>RuleRegulation</Text>
+    <View style={styles.itemContainer}>
+      <TouchableOpacity
+        onPress={() => onToggle(item.id)}
+        style={styles.titleContainer}
+      >
+        <Text style={styles.titleText}>{item.title}</Text>
+      </TouchableOpacity>
+      {expanded && (
+        <Text style={styles.descriptionText}>{item.description}</Text>
+      )}
+    </View>
+  );
+};
+const RuleRegulation = () => {
+  const [expandedItemId, setExpandedItemId] = useState(null);
+
+  const handleToggle = (id) => {
+    setExpandedItemId((prevId) => (prevId === id ? null : id));
+  };
+
+  const renderItem = ({ item }) => (
+    <ExpandableItem
+      item={item}
+      onToggle={handleToggle}
+      expanded={item.id === expandedItemId}
+    />
+  );
+  return (
+    <View style={styles.container}>
+      <FlatList
+        data={rulesData}
+        renderItem={renderItem}
+        keyExtractor={(item) => item.id}
+      />
     </View>
   );
 };
 
 export default RuleRegulation;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    paddingTop: 50,
+    backgroundColor: "#f5f5f5",
+  },
+  itemContainer: {
+    backgroundColor: "#ffffff",
+    padding: 10,
+    marginVertical: 5,
+    marginHorizontal: 10,
+    borderRadius: 5,
+    borderWidth: 1,
+    borderColor: "#ddd",
+  },
+  titleContainer: {
+    padding: 10,
+  },
+  titleText: {
+    fontSize: 16,
+    fontWeight: "bold",
+  },
+  descriptionText: {
+    marginTop: 5,
+    fontSize: 14,
+    color: "#666",
+  },
+});
