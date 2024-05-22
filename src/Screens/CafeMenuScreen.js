@@ -61,6 +61,32 @@ const menuData = [
   },
 ];
 
+const ExpandableItem = ({ item, onToggle, expanded }) => {
+  return (
+    <View style={styles.itemContainer}>
+      <TouchableOpacity
+        onPress={() => onToggle(item.day)}
+        style={styles.titleContainer}
+      >
+        <Text style={styles.titleText}>{item.day}</Text>
+      </TouchableOpacity>
+      {expanded && (
+        <View style={styles.mealsContainer}>
+          <Text style={styles.mealText}>
+            <Text style={styles.mealType}>Breakfast:</Text>{" "}
+            {item.meals.breakfast}
+          </Text>
+          <Text style={styles.mealText}>
+            <Text style={styles.mealType}>Lunch:</Text> {item.meals.lunch}
+          </Text>
+          <Text style={styles.mealText}>
+            <Text style={styles.mealType}>Dinner:</Text> {item.meals.dinner}
+          </Text>
+        </View>
+      )}
+    </View>
+  );
+};
 const CafeMenuScreen = () => {
   return (
     <View>
