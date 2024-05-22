@@ -4,6 +4,7 @@ import HomeScreen from "./src/Screens/HomeScreen";
 import GpaCalculator from "./src/Screens/GpaCalculatorScreen";
 import CgpaCalculator from "./src/Screens/CgpaCalculatorScreen";
 import RuleRegulation from "./src/Screens/RuleRegulationScreen";
+import CafeMenuScreen from "./src/Screens/CafeMenuScreen";
 
 const Stack = createStackNavigator();
 
@@ -12,9 +13,10 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="GpaCalculator" component={GpaCalculator} />
-        <Stack.Screen name="CgpaCalculator" component={CgpaCalculator} />
-        <Stack.Screen name="RuleRegulation" component={RuleRegulation} />
+        <Stack.Screen name="GPA Calculator" component={GpaCalculator} />
+        <Stack.Screen name="CGPA Calculator" component={CgpaCalculator} />
+        <Stack.Screen name="Rules And Regulations" component={RuleRegulation} />
+        <Stack.Screen name="Campus Cafe Menu" component={CafeMenuScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

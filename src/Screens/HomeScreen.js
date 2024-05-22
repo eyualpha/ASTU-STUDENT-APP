@@ -6,15 +6,19 @@ const HomeScreen = ({ navigation }) => {
     <View style={styles.container}>
       <Button
         title="Go to GPA Calculator"
-        onPress={() => navigation.navigate("GpaCalculator")}
+        onPress={() => navigation.navigate("GPA Calculator")}
       />
       <Button
         title="Go to CGPA Calculator"
-        onPress={() => navigation.navigate("CgpaCalculator")}
+        onPress={() => navigation.navigate("CGPA Calculator")}
       />
       <Button
         title="Go to RuleRegulation"
-        onPress={() => navigation.navigate("RuleRegulation")}
+        onPress={() => navigation.navigate("Rules And Regulations")}
+      />
+      <Button
+        title="Go to Cafe Menu"
+        onPress={() => navigation.navigate("Campus Cafe Menu")}
       />
     </View>
   );
