@@ -3,11 +3,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { StatusBar } from "react-native";
 import Icon from "react-native-vector-icons/Ionicons";
 
-import HomeScreen from "./src/Screens/HomeScreen";
-import GpaCalculator from "./src/Screens/GpaCalculatorScreen";
-import CgpaCalculator from "./src/Screens/CgpaCalculatorScreen";
-import RuleRegulation from "./src/Screens/RuleRegulationScreen";
-import CafeMenuScreen from "./src/Screens/CafeMenuScreen";
+
 
 const Stack = createStackNavigator();
 
