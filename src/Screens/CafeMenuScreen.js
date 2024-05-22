@@ -88,13 +88,62 @@ const ExpandableItem = ({ item, onToggle, expanded }) => {
   );
 };
 const CafeMenuScreen = () => {
+  const [expandedDay, setExpandedDay] = useState(null);
+
+  const handleToggle = (day) => {
+    setExpandedDay((prevDay) => (prevDay === day ? null : day));
+  };
+
+  const renderItem = ({ item }) => (
+    <ExpandableItem
+      item={item}
+      onToggle={handleToggle}
+      expanded={item.day === expandedDay}
+    />
+  );
   return (
-    <View>
-      <Text>CafeMenuScreen</Text>
+    <View style={styles.container}>
+      <FlatList
+        data={menuData}
+        renderItem={renderItem}
+        keyExtractor={(item) => item.day}
+      />
     </View>
   );
 };
 
 export default CafeMenuScreen;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    paddingTop: 50,
+    backgroundColor: "#f5f5f5",
+  },
+  itemContainer: {
+    backgroundColor: "#ffffff",
+    padding: 10,
+    marginVertical: 5,
+    marginHorizontal: 10,
+    borderRadius: 5,
+    borderWidth: 1,
+    borderColor: "#ddd",
+  },
+  titleContainer: {
+    padding: 10,
+  },
+  titleText: {
+    fontSize: 18,
+    fontWeight: "bold",
+  },
+  mealsContainer: {
+    marginTop: 10,
+  },
+  mealText: {
+    fontSize: 16,
+    marginVertical: 2,
+  },
+  mealType: {
+    fontWeight: "bold",
+  },
+});
