@@ -6,6 +6,7 @@ import {
   FlatList,
 } from "react-native";
 import React, { useState } from "react";
+import Color from "../Componets/Color";
 
 const menuData = [
   {
@@ -141,6 +142,7 @@ const styles = StyleSheet.create({
   titleText: {
     fontSize: 18,
     fontWeight: "bold",
+    color: Color.primary,
   },
   mealsContainer: {
     marginTop: 10,

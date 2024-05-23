@@ -20,6 +20,10 @@ const HomeScreen = ({ navigation }) => {
         title="Go to Cafe Menu"
         onPress={() => navigation.navigate("Campus Cafe Menu")}
       />
+      <Button
+        title="Locations"
+        onPress={() => navigation.navigate("Campus Locations")}
+      />
     </View>
   );
 };
