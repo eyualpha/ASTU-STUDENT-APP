@@ -9,20 +9,14 @@ import {
 import React from "react";
 import Color from "../Componets/Color";
 import { IconButton, Card } from "react-native-paper";
+import GreetingCard from "../Componets/GreetingCard";
 
 const HomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <View style={styles.greetingSection}>
-        <Text style={styles.greetingTitle}>Hello!</Text>
-        <Text style={styles.greetingDetail}>
-          Welcome to MY ASTU. The ultimate information guide application for
-          students.
-        </Text>
-      </View>
-
+      <GreetingCard />
       <Card style={styles.card}>
-        <Card.Title style={styles.cardTitle} title="Explore Services" />
+        <Card.Title title="Explore Services" />
         <Card.Content style={styles.servicesContainer}>
           <TouchableOpacity
             style={styles.serviceBox}
@@ -74,22 +68,6 @@ export default HomeScreen;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-  },
-  greetingSection: {
-    backgroundColor: Color.primary,
-    height: 100,
-    margin: 15,
-    borderRadius: 10,
-    padding: 8,
-  },
-  greetingTitle: {
-    color: "#fff",
-    fontSize: 25,
-    fontWeight: "bold",
-  },
-  greetingDetail: {
-    fontSize: 15,
-    color: "#fff",
   },
   card: {
     marginHorizontal: 16,

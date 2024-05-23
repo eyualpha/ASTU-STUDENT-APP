@@ -17,7 +17,7 @@ const locations = [
   },
   {
     id: 2,
-    title: "Library",
+    title: "Cafe",
     description: "A quiet place to study and read books.",
     image: require("../Assets/Images/splash.png"),
   },
@@ -57,11 +57,14 @@ const styles = StyleSheet.create({
   },
   item: {
     marginBottom: 10,
+    borderColor: "gray",
+    borderBottomWidth: 1,
   },
   title: {
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: "bold",
     color: "#1C588C",
+    marginLeft: 15,
   },
   details: {
     marginTop: 10,
