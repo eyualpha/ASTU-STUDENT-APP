@@ -5,6 +5,7 @@ import {
   TextInput,
   Button,
   FlatList,
+  Alert,
 } from "react-native";
 import React, { useState } from "react";
 
@@ -29,6 +30,11 @@ const CgpaCalculator = () => {
       if (!isNaN(gpa) && !isNaN(credits)) {
         totalCredits += credits;
         totalPoints += gpa * credits;
+      } else if (isNaN(totalPoints / totalCredits)) {
+        Alert.alert(
+          "Invalid input",
+          "Please provide valid semister GPA and credits."
+        );
       }
     });
     setCgpa(totalPoints / totalCredits);

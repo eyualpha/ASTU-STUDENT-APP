@@ -56,9 +56,7 @@ const GpaCalculator = () => {
     if (totalCredits === 0) {
       Alert.alert("Invalid input", "Total credits cannot be zero.");
       return;
-    }
-
-    setGpa(totalPoints / totalCredits);
+    } else setGpa(totalPoints / totalCredits);
   };
 
   const handleInputChange = (id, field, value) => {
