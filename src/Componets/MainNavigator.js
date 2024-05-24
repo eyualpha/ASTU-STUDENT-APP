@@ -40,7 +40,6 @@ const MainNavigator = () => {
             size={25}
             color="#fff"
             style={{ marginRight: 15 }}
-            onPress={() => navigation.openDrawer()}
           />
         ),
       })}

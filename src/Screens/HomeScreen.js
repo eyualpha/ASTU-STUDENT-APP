@@ -10,11 +10,13 @@ import React from "react";
 import Color from "../Componets/Color";
 import { IconButton, Card } from "react-native-paper";
 import GreetingCard from "../Componets/GreetingCard";
+import SlidingCard from "../Componets/SliderCard";
 
 const HomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <GreetingCard />
+      {/* <GreetingCard /> */}
+      <SlidingCard/>
       <Card style={styles.card}>
         <Card.Title title="Explore Services" />
         <Card.Content style={styles.servicesContainer}>
