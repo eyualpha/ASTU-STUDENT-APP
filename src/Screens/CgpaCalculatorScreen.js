@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import {
   StyleSheet,
   Text,
@@ -6,8 +7,9 @@ import {
   Button,
   FlatList,
   Alert,
+  TouchableOpacity,
 } from "react-native";
-import React, { useState } from "react";
+import { IconButton } from "react-native-paper"; 
 
 const CgpaCalculator = () => {
   const [semesters, setSemesters] = useState([
@@ -21,6 +23,11 @@ const CgpaCalculator = () => {
       { id: (semesters.length + 1).toString(), gpa: "", credits: "" },
     ]);
   };
+
+  const removeSemester = (id) => {
+    setSemesters(semesters.filter((semester) => semester.id !== id));
+  };
+
   const calculateCgpa = () => {
     let totalCredits = 0;
     let totalPoints = 0;
@@ -33,12 +40,13 @@ const CgpaCalculator = () => {
       } else if (isNaN(totalPoints / totalCredits)) {
         Alert.alert(
           "Invalid input",
-          "Please provide valid semister GPA and credits."
+          "Please provide valid semester GPA and credits."
         );
       }
     });
     setCgpa(totalPoints / totalCredits);
   };
+
   const handleInputChange = (id, field, value) => {
     const updatedSemesters = semesters.map((semester) => {
       if (semester.id === id) {
@@ -72,6 +80,12 @@ const CgpaCalculator = () => {
                 handleInputChange(item.id, "credits", value)
               }
             />
+            <IconButton
+              icon="delete"
+              color="red"
+              size={24}
+              onPress={() => removeSemester(item.id)}
+            />
           </View>
         )}
         keyExtractor={(item) => item.id}
@@ -99,6 +113,7 @@ const styles = StyleSheet.create({
   },
   semester: {
     flexDirection: "row",
+    alignItems: "center",
     marginBottom: 10,
   },
   input: {

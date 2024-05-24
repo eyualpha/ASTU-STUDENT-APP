@@ -16,7 +16,7 @@ const HomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       {/* <GreetingCard /> */}
-      <SlidingCard/>
+      <SlidingCard />
       <Card style={styles.card}>
         <Card.Title title="Explore Services" />
         <Card.Content style={styles.servicesContainer}>
@@ -38,7 +38,7 @@ const HomeScreen = ({ navigation }) => {
 
           <TouchableOpacity
             style={styles.serviceBox}
-            onPress={() => navigation.navigate("Campus Cafe Menu")}
+            onPress={() => navigation.navigate("Rules And Regulations")}
           >
             <IconButton icon="file-document-outline" size={30} />
             <Text style={styles.serviceText}>Rule and Regulations</Text>
@@ -58,6 +58,14 @@ const HomeScreen = ({ navigation }) => {
           >
             <IconButton icon="map-marker" size={30} />
             <Text style={styles.serviceText}>Locations</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={styles.serviceBox}
+            onPress={() => navigation.navigate("School")}
+          >
+            <IconButton icon="school" size={30} />
+            <Text style={styles.serviceText}>SoEEC</Text>
           </TouchableOpacity>
         </Card.Content>
       </Card>
