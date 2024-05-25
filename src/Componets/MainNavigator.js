@@ -7,7 +7,8 @@ import CgpaCalculator from "../Screens/CgpaCalculatorScreen";
 import RuleRegulation from "../Screens/RuleRegulationScreen";
 import LocationScreen from "../Screens/LocationListScreen";
 import { createStackNavigator } from "@react-navigation/stack";
-import School from "../Screens/SchoolScreen";
+import SoECC from "../Screens/SoECC";
+import CivilSchool from "../Screens/CivilSchool";
 import Color from "./Color";
 
 const Stack = createStackNavigator();
@@ -51,7 +52,8 @@ const MainNavigator = () => {
       <Stack.Screen name="Rules And Regulations" component={RuleRegulation} />
       <Stack.Screen name="Campus Cafe Menu" component={CafeMenuScreen} />
       <Stack.Screen name="Campus Locations" component={LocationScreen} />
-      <Stack.Screen name="School" component={School} />
+      <Stack.Screen name="SoECC" component={SoECC} />
+      <Stack.Screen name="Civil School" component={CivilSchool} />
     </Stack.Navigator>
   );
 };

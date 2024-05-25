@@ -2,68 +2,10 @@ import React, { useState } from "react";
 import { View, StyleSheet, SectionList } from "react-native";
 import { List, Card, Paragraph } from "react-native-paper";
 import Collapsible from "react-native-collapsible";
+import { collegeData } from "../Componets/Data/SoEECdata";
 
-const collegeData = {
-  collegeImage: require("../Assets/Images/image.jpg"),
-  collegeDescription:
-    "Welcome to XYZ College, a place of excellence and learning.",
-  departments: [
-    {
-      id: "1",
-      name: "Computer Science and Engineering",
-      image: require("../Assets/Images/image.jpg"),
-      description:
-        "The Computer Science department offers various courses in programming, algorithms, and more.",
-      courses: [
-        { name: "Data Structures", code: "CS101" },
-        { name: "Algorithms", code: "CS102" },
-        { name: "Databases", code: "CS103" },
-        { name: "Operating Systems", code: "CS104" },
-      ],
-    },
-    {
-      id: "2",
-      name: "Software Engineering",
-      image: require("../Assets/Images/image.jpg"),
-      description:
-        "The Mechanical Engineering department provides courses on thermodynamics, mechanics, and more.",
-      courses: [
-        { name: "Thermodynamics", code: "ME101" },
-        { name: "Fluid Mechanics", code: "ME102" },
-        { name: "Solid Mechanics", code: "ME103" },
-        { name: "Dynamics", code: "ME104" },
-      ],
-    },
-    {
-      id: "3",
-      name: "Electronics and Communication Engineering",
-      image: require("../Assets/Images/image.jpg"),
-      description:
-        "The Mechanical Engineering department provides courses on thermodynamics, mechanics, and more.",
-      courses: [
-        { name: "Thermodynamics", code: "ME101" },
-        { name: "Fluid Mechanics", code: "ME102" },
-        { name: "Solid Mechanics", code: "ME103" },
-        { name: "Dynamics", code: "ME104" },
-      ],
-    },
-    {
-      id: "4",
-      name: "Electrical Power and Control Engineering",
-      image: require("../Assets/Images/image.jpg"),
-      description:
-        "The Mechanical Engineering department provides courses on thermodynamics, mechanics, and more.",
-      courses: [
-        { name: "Thermodynamics", code: "ME101" },
-        { name: "Fluid Mechanics", code: "ME102" },
-        { name: "Solid Mechanics", code: "ME103" },
-        { name: "Dynamics", code: "ME104" },
-      ],
-    },
-  ],
-};
 
-const School = () => {
+const SoECC = () => {
   const [expandedDepartment, setExpandedDepartment] = useState(null);
 
   const handlePress = (id) => {
@@ -128,7 +70,7 @@ const School = () => {
   );
 };
 
-export default School;
+export default SoECC;
 
 const styles = StyleSheet.create({
   container: {
@@ -139,7 +81,7 @@ const styles = StyleSheet.create({
     margin: 15,
   },
   collegeImage: {
-    height: 150,
+    height: 50,
   },
   collegeDescription: {
     marginTop: 10,
@@ -147,9 +89,10 @@ const styles = StyleSheet.create({
   },
   departmentCard: {
     marginBottom: 20,
-    marginHorizontal: 5,
+    marginHorizontal: 15,
   },
   departmentImage: {
     height: 150,
+    marginBottom: 10
   },
 });

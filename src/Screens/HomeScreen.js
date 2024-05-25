@@ -62,10 +62,18 @@ const HomeScreen = ({ navigation }) => {
 
           <TouchableOpacity
             style={styles.serviceBox}
-            onPress={() => navigation.navigate("School")}
+            onPress={() => navigation.navigate("SoECC")}
           >
             <IconButton icon="school" size={30} />
             <Text style={styles.serviceText}>SoEEC</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={styles.serviceBox}
+            onPress={() => navigation.navigate("Civil School")}
+          >
+            <IconButton icon="school" size={30} />
+            <Text style={styles.serviceText}>Civil School</Text>
           </TouchableOpacity>
         </Card.Content>
       </Card>
