@@ -8,12 +8,11 @@ import {
 import React, { useState } from "react";
 import Color from "../Componets/Color";
 import { menuData } from "../Componets/Data/CampusCafeMenuData";
-import GreetingCard from "../Componets/GreetingCard";
+import TextCard from "../Componets/TextCard";
 
 const ExpandableItem = ({ item, onToggle, expanded }) => {
   return (
     <View style={styles.itemContainer}>
-      <GreetingCard/>
       <TouchableOpacity
         onPress={() => onToggle(item.day)}
         style={styles.titleContainer}
@@ -53,6 +52,10 @@ const CafeMenuScreen = () => {
   );
   return (
     <View style={styles.container}>
+      <TextCard
+        title="Cafe Menu"
+        detail="Welcome to ASTU Students cafe. the menu is liste below"
+      />
       <FlatList
         data={menuData}
         renderItem={renderItem}
@@ -67,7 +70,6 @@ export default CafeMenuScreen;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 50,
     backgroundColor: "#f5f5f5",
   },
   itemContainer: {
@@ -91,15 +93,15 @@ const styles = StyleSheet.create({
     marginTop: 10,
     backgroundColor: "#f1f1f1",
     padding: 5,
-    borderRadius: 5
+    borderRadius: 5,
   },
   mealText: {
     fontSize: 16,
     marginVertical: 2,
-    fontStyle: 'italic'
+    fontStyle: "italic",
   },
   mealType: {
     fontWeight: "bold",
-    fontStyle:'italic',
+    fontStyle: "italic",
   },
 });

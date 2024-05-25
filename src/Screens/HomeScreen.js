@@ -9,7 +9,7 @@ import {
 import React from "react";
 import Color from "../Componets/Color";
 import { IconButton, Card } from "react-native-paper";
-import GreetingCard from "../Componets/GreetingCard";
+import GreetingCard from "../Componets/TextCard";
 import SlidingCard from "../Componets/SliderCard";
 
 const HomeScreen = ({ navigation }) => {
