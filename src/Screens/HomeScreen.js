@@ -41,7 +41,7 @@ const HomeScreen = ({ navigation }) => {
             onPress={() => navigation.navigate("Rules And Regulations")}
           >
             <IconButton icon="file-document-outline" size={30} />
-            <Text style={styles.serviceText}>Rule and Regulations</Text>
+            <Text style={styles.serviceText}>Rules and Regulations</Text>
           </TouchableOpacity>
 
           <TouchableOpacity

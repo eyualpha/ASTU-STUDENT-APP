@@ -8,10 +8,12 @@ import {
 import React, { useState } from "react";
 import Color from "../Componets/Color";
 import { menuData } from "../Componets/Data/CampusCafeMenuData";
+import GreetingCard from "../Componets/GreetingCard";
 
 const ExpandableItem = ({ item, onToggle, expanded }) => {
   return (
     <View style={styles.itemContainer}>
+      <GreetingCard/>
       <TouchableOpacity
         onPress={() => onToggle(item.day)}
         style={styles.titleContainer}

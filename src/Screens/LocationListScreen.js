@@ -7,21 +7,8 @@ import {
   ScrollView,
 } from "react-native";
 import React, { useState } from "react";
+import { locations } from "../Componets/Data/LocationData";
 
-const locations = [
-  {
-    id: 1,
-    title: "Library",
-    description: "A quiet place to study and read books.",
-    image: require("../Assets/Images/splash.png"),
-  },
-  {
-    id: 2,
-    title: "Cafe",
-    description: "A quiet place to study and read books.",
-    image: require("../Assets/Images/splash.png"),
-  },
-];
 const LocationScreen = () => {
   const [expanded, setExpanded] = useState(null);
 

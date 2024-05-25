@@ -59,12 +59,12 @@ const SoECC = () => {
       <SectionList
         sections={collegeData.departments.map((department) => ({
           ...department,
-          data: [{}], // This is required by SectionList to render content
+          data: [{}],
         }))}
         keyExtractor={(item, index) => index.toString()}
         renderSectionHeader={renderDepartmentHeader}
         renderItem={renderDepartmentContent}
-        showsVerticalScrollIndicator={false} // Hides the vertical scroll indicator
+        showsVerticalScrollIndicator={false}
       />
     </View>
   );
@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   collegeCard: {
-    marginBottom: 20,
+    marginBottom: 15,
     margin: 15,
   },
   collegeImage: {
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
   },
   collegeDescription: {
     marginTop: 10,
-    fontSize: 16,
+    fontSize: 14,
   },
   departmentCard: {
     marginBottom: 20,

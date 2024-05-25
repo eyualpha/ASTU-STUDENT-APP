@@ -1,14 +1,14 @@
 export const collegeData = {
   collegeImage: require("../../Assets/Images/image.jpg"),
   collegeDescription:
-    "School of Electrical Engineering and Computing (SoECC) is aimed to produce a world calss competenet elctrical engineers and computing professionals who are equipped with necessary skills and knowledge to solve indivdual and organizational problems of the country and bring growth to the whole world. The contain the following Departments.",
+    "School of Electrical Engineering and Computing (SoEEC) is aimed to produce a world calss competenet elctrical engineers and computing professionals who are equipped with necessary skills and knowledge to solve indivdual and organizational problems of the country and bring growth to the whole world. The contain the following Departments.",
   departments: [
     {
       id: "1",
       name: "Computer Science and Engineering",
       image: require("../../Assets/Images/CSE.jpg"),
       description:
-        "The Computer Science and Engineerig major at ASTU is structured in a way that supports the study of both theoretical and engineering aspects of computers. it finds balance between breadth and depth to provide a sold foundation inthe basic science and mathematics on one hand and professionalism, leadership and skills on te other hand.",
+        "The Computer Science and Engineerig major at ASTU is structured in a way that supports the study of both theoretical and engineering aspects of computers. it finds balance between breadth and depth to provide a sold foundation inthe basic science and mathematics on one hand and professionalism, leadership and skills on the other hand.",
       courses: [
         { name: "Data Structures", code: "CSE1102" },
         { name: "Algorithms", code: "CSE2222" },

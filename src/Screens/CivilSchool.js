@@ -58,12 +58,12 @@ const CivilSchool = () => {
       <SectionList
         sections={collegeData.departments.map((department) => ({
           ...department,
-          data: [{}], // This is required by SectionList to render content
+          data: [{}], 
         }))}
         keyExtractor={(item, index) => index.toString()}
         renderSectionHeader={renderDepartmentHeader}
         renderItem={renderDepartmentContent}
-        showsVerticalScrollIndicator={false} // Hides the vertical scroll indicator
+        showsVerticalScrollIndicator={false} 
       />
     </View>
   );
