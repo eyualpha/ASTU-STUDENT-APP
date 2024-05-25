@@ -9,7 +9,7 @@ import {
   Alert,
   TouchableOpacity,
 } from "react-native";
-import { IconButton } from "react-native-paper"; 
+import { IconButton } from "react-native-paper";
 
 const CgpaCalculator = () => {
   const [semesters, setSemesters] = useState([
@@ -73,7 +73,7 @@ const CgpaCalculator = () => {
             />
             <TextInput
               style={styles.input}
-              placeholder="Credits"
+              placeholder="Semister Credit"
               keyboardType="numeric"
               value={item.credits}
               onChangeText={(value) =>

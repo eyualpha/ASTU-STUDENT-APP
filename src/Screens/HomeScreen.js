@@ -59,7 +59,12 @@ const HomeScreen = ({ navigation }) => {
             <IconButton icon="map-marker" size={30} />
             <Text style={styles.serviceText}>Locations</Text>
           </TouchableOpacity>
+        </Card.Content>
+      </Card>
 
+      <Card style={styles.card}>
+        <Card.Title title="Schools and Courses" />
+        <Card.Content style={styles.servicesContainer}>
           <TouchableOpacity
             style={styles.serviceBox}
             onPress={() => navigation.navigate("SoECC")}
@@ -74,6 +79,22 @@ const HomeScreen = ({ navigation }) => {
           >
             <IconButton icon="school" size={30} />
             <Text style={styles.serviceText}>Civil School</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={styles.serviceBox}
+            onPress={() => navigation.navigate("Mechanical School")}
+          >
+            <IconButton icon="school" size={30} />
+            <Text style={styles.serviceText}>Mechanical School</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={styles.serviceBox}
+            onPress={() => navigation.navigate("Applied Science School")}
+          >
+            <IconButton icon="school" size={30} />
+            <Text style={styles.serviceText}>Applied Science</Text>
           </TouchableOpacity>
         </Card.Content>
       </Card>

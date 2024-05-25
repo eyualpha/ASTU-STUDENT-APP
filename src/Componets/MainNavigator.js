@@ -9,7 +9,9 @@ import LocationScreen from "../Screens/LocationListScreen";
 import { createStackNavigator } from "@react-navigation/stack";
 import SoECC from "../Screens/SoECC";
 import CivilSchool from "../Screens/CivilSchool";
+import MechanicalSchool from "../Screens/MechanicalSchool";
 import Color from "./Color";
+import AppliedSchool from "../Screens/AppliedSchool";
 
 const Stack = createStackNavigator();
 
@@ -54,6 +56,11 @@ const MainNavigator = () => {
       <Stack.Screen name="Campus Locations" component={LocationScreen} />
       <Stack.Screen name="SoECC" component={SoECC} />
       <Stack.Screen name="Civil School" component={CivilSchool} />
+      <Stack.Screen name="Mechanical School" component={MechanicalSchool} />
+      <Stack.Screen name="Applied Science School" component={AppliedSchool} />
+
+
+
     </Stack.Navigator>
   );
 };
