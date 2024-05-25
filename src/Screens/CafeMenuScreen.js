@@ -7,66 +7,7 @@ import {
 } from "react-native";
 import React, { useState } from "react";
 import Color from "../Componets/Color";
-
-const menuData = [
-  {
-    day: "Monday",
-    meals: {
-      breakfast: "Firfir, Bread, Tea",
-      lunch: "Rice with Therefore,",
-      dinner: "Shiro, MIsir Wot, Kik Wot",
-    },
-  },
-  {
-    day: "Tuesday",
-    meals: {
-      breakfast: "Firfir, Bread, Tea",
-      lunch: "Rice with Therefore,",
-      dinner: "Shiro, MIsir Wot, Kik Wot",
-    },
-  },
-
-  {
-    day: "Wednesday",
-    meals: {
-      breakfast: "Firfir, Bread, Tea",
-      lunch: "Rice with Therefore,",
-      dinner: "Shiro, MIsir Wot, Kik Wot",
-    },
-  },
-  {
-    day: "Thursday",
-    meals: {
-      breakfast: "Firfir, Bread, Tea",
-      lunch: "Rice with Therefore,",
-      dinner: "Shiro, MIsir Wot, Kik Wot",
-    },
-  },
-  {
-    day: "Friday",
-    meals: {
-      breakfast: "Firfir, Bread, Tea",
-      lunch: "Rice with Therefore,",
-      dinner: "Shiro, MIsir Wot, Kik Wot",
-    },
-  },
-  {
-    day: "Saturday",
-    meals: {
-      breakfast: "Firfir, Bread, Tea",
-      lunch: "Rice with Therefore,",
-      dinner: "Shiro, MIsir Wot, Kik Wot",
-    },
-  },
-  {
-    day: "Sunday",
-    meals: {
-      breakfast: "Firfir, Bread, Tea",
-      lunch: "Rice with Therefore,",
-      dinner: "Shiro, MIsir Wot, Kik Wot",
-    },
-  },
-];
+import { menuData } from "../Componets/Data/CampusCafeMenuData";
 
 const ExpandableItem = ({ item, onToggle, expanded }) => {
   return (
@@ -146,12 +87,17 @@ const styles = StyleSheet.create({
   },
   mealsContainer: {
     marginTop: 10,
+    backgroundColor: "#f1f1f1",
+    padding: 5,
+    borderRadius: 5
   },
   mealText: {
     fontSize: 16,
     marginVertical: 2,
+    fontStyle: 'italic'
   },
   mealType: {
     fontWeight: "bold",
+    fontStyle:'italic',
   },
 });
