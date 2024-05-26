@@ -1,41 +1,45 @@
 export const collegeData = {
   collegeImage: require("../../Assets/Images/mech.jpg"),
-  collegeDescription: "Mechanical School",
+  collegeDescription:
+    "The School of Applied Science offers a multidisciplinary education that bridges theoretical knowledge and practical application. providing the analytical tools essential for problem-solving across scientific disciplines. This integrated approach prepares students to innovate and excel in various scientific careers, driving advancements in technology, healthcare, and industry.",
   departments: [
     {
       id: "1",
       name: "Mechanical Engineering",
       image: require("../../Assets/Images/mechanical.jpg"),
-      description: "",
+      description:
+        "The Mechanical Engineering Department offers a multidisciplinary education that bridges theoretical knowledge and practical application. providing the analytical tools essential for problem-solving across scientific disciplines. This integrated approach prepares students to innovate and excel in various scientific careers, driving advancements in technology, healthcare, and industry.",
       courses: [
-        { name: "Data Structures", code: "CSE1102" },
-        { name: "Algorithms", code: "CSE2222" },
-        { name: "Databases", code: "CSE103" },
-        { name: "Operating Systems", code: "CSE3212" },
+        { name: "Machine Drawing", code: "ME1102" },
+        { name: "Automotive Engineering", code: "ME2222" },
+        { name: "Machine Drawing", code: "ME103" },
+        { name: "Welding", code: "ME3212" },
       ],
     },
     {
       id: "2",
       name: "Chemical Engineering",
       image: require("../../Assets/Images/chemical.png"),
-      description: "",
+      description:
+        "The Chemical Engineering Department offers a multidisciplinary education that bridges theoretical knowledge and practical application. providing the analytical tools essential for problem-solving across scientific disciplines. This integrated approach prepares students to innovate and excel in various scientific careers, driving advancements in technology, healthcare, and industry.",
       courses: [
-        { name: "Mobile Development", code: "SE101" },
-        { name: "Formal Methods", code: "SE102" },
-        { name: " Engineering Web Based systems", code: "Web103" },
-        { name: "Object Orientd Programming", code: "CSE104" },
+        { name: "Atomic Reactions", code: "CH101" },
+        { name: "Combustion", code: "CH102" },
+        { name: "Chemical Reserch", code: "CH103" },
+        { name: "Ferimentation", code: "CH104" },
       ],
     },
     {
       id: "3",
       name: "Material Science and Engineeing",
       image: require("../../Assets/Images/mech.jpg"),
-      description: "",
+      description:
+        "The Material Science and Engineeringoffers a multidisciplinary education that bridges theoretical knowledge and practical application. providing the analytical tools essential for problem-solving across scientific disciplines. This integrated approach prepares students to innovate and excel in various scientific careers, driving advancements in technology, healthcare, and industry.",
       courses: [
-        { name: "Digital Logic Design", code: "ME101" },
-        { name: "Communicaiton Systems", code: "ECE3202" },
-        { name: "MIcroprocessor and Interfacing", code: "ECE3203" },
-        { name: "Digital Signal Processing", code: "ECE2206" },
+        { name: "Material Engineering", code: "MS101" },
+        { name: "Material Science", code: "MS3202" },
+        { name: "Introduction To Matter", code: "MS201" },
+        { name: "Liquds", code: "MS2206" },
       ],
     },
   ],

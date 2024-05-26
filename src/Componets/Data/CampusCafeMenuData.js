@@ -3,7 +3,7 @@ export const menuData = [
     day: "Monday",
     meals: {
       breakfast: "Firfir, Bread, Tea",
-      lunch: "Rice with Meat,",
+      lunch: "Rice with Meat",
       dinner: "Shiro, Misir Wot, Kik Wot",
     },
   },
@@ -11,7 +11,7 @@ export const menuData = [
     day: "Tuesday",
     meals: {
       breakfast: "Macaroni, Bread, Tea",
-      lunch: "Rice with Therefore,",
+      lunch: "Rice with Minchet (therefore)",
       dinner: "Minchet (therefore), Shiro",
     },
   },
@@ -20,7 +20,7 @@ export const menuData = [
     day: "Wednesday",
     meals: {
       breakfast: "Firfir, Bread, Tea",
-      lunch: "Rice with Therefore,",
+      lunch: "Shiro, Misir Wot, Kik Wot",
       dinner: "Shiro, Dinch, Bread",
     },
   },

@@ -8,6 +8,7 @@ import {
 } from "react-native";
 import React, { useState } from "react";
 import { locations } from "../Componets/Data/LocationData";
+import TextCard from "../Componets/TextCard";
 
 const LocationScreen = () => {
   const [expanded, setExpanded] = useState(null);
@@ -17,7 +18,10 @@ const LocationScreen = () => {
   };
 
   return (
+    <View style = {styles.container}>
+      <TextCard title = 'Reminder' detail ='All the location are taken from the square infront of Priesdent`s office and Central library'/>
     <ScrollView style={styles.container}>
+      
       {locations.map((location) => (
         <View key={location.id} style={styles.item}>
           <TouchableOpacity onPress={() => handlePress(location.id)}>
@@ -32,6 +36,7 @@ const LocationScreen = () => {
         </View>
       ))}
     </ScrollView>
+    </View>
   );
 };
 
@@ -54,7 +59,7 @@ const styles = StyleSheet.create({
     marginLeft: 15,
   },
   details: {
-    marginTop: 10,
+    margin: 15,
   },
   image: {
     width: "100%",

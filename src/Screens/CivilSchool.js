@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
   },
   collegeDescription: {
     marginTop: 10,
-    fontSize: 16,
+    fontSize: 14,
   },
   departmentCard: {
     marginBottom: 20,
