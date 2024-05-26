@@ -7,9 +7,9 @@ const { width } = Dimensions.get("window");
 const SlidingCard = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const images = [
-    require("../Assets/Images/splash.png"),
+    require("../Assets/Images/intro1.jpg"),
     require("../Assets/Images/getLocation.png"),
-    require("../Assets/Images/splash.png"),
+    require("../Assets/Images/intro2.jpg"),
   ];
 
   const onScroll = (event) => {

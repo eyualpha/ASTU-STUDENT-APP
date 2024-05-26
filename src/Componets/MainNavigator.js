@@ -38,14 +38,6 @@ const MainNavigator = () => {
               onPress={() => navigation.goBack()}
             />
           ),
-        headerRight: () => (
-          <Icon
-            name="menu"
-            size={25}
-            color="#fff"
-            style={{ marginRight: 15 }}
-          />
-        ),
       })}
     >
       <Stack.Screen name="Home" component={HomeScreen} />
@@ -58,9 +50,6 @@ const MainNavigator = () => {
       <Stack.Screen name="Civil School" component={CivilSchool} />
       <Stack.Screen name="Mechanical School" component={MechanicalSchool} />
       <Stack.Screen name="Applied Science School" component={AppliedSchool} />
-
-
-
     </Stack.Navigator>
   );
 };
