@@ -1,12 +1,23 @@
+<<<<<<< HEAD
 
 import { StatusBar } from "react-native";
 
 
 
+=======
+import { NavigationContainer } from "@react-navigation/native";
+import MainNavigator from "./src/Componets/MainNavigator";
+import { StatusBar } from "expo-status-bar";
+import Color from "./src/Componets/Color";
+
+
+
+>>>>>>> new-branch
 
 export default function App() {
   return (
     <NavigationContainer>
+<<<<<<< HEAD
       <StatusBar barStyle="light-content" backgroundColor="#1C588C" />
       <Stack.Navigator
         initialRouteName="Home"
@@ -46,6 +57,10 @@ export default function App() {
         <Stack.Screen name="Rules And Regulations" component={RuleRegulation} />
         <Stack.Screen name="Campus Cafe Menu" component={CafeMenuScreen} />
       </Stack.Navigator>
+=======
+      <StatusBar style="light" backgroundColor={Color.primary}/>
+      <MainNavigator />
+>>>>>>> new-branch
     </NavigationContainer>
   );
 }

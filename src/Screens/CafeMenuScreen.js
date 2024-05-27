@@ -6,66 +6,9 @@ import {
   FlatList,
 } from "react-native";
 import React, { useState } from "react";
-
-const menuData = [
-  {
-    day: "Monday",
-    meals: {
-      breakfast: "Firfir, Bread, Tea",
-      lunch: "Rice with Therefore,",
-      dinner: "Shiro, MIsir Wot, Kik Wot",
-    },
-  },
-  {
-    day: "Tuesday",
-    meals: {
-      breakfast: "Firfir, Bread, Tea",
-      lunch: "Rice with Therefore,",
-      dinner: "Shiro, MIsir Wot, Kik Wot",
-    },
-  },
-
-  {
-    day: "Wednesday",
-    meals: {
-      breakfast: "Firfir, Bread, Tea",
-      lunch: "Rice with Therefore,",
-      dinner: "Shiro, MIsir Wot, Kik Wot",
-    },
-  },
-  {
-    day: "Thursday",
-    meals: {
-      breakfast: "Firfir, Bread, Tea",
-      lunch: "Rice with Therefore,",
-      dinner: "Shiro, MIsir Wot, Kik Wot",
-    },
-  },
-  {
-    day: "Friday",
-    meals: {
-      breakfast: "Firfir, Bread, Tea",
-      lunch: "Rice with Therefore,",
-      dinner: "Shiro, MIsir Wot, Kik Wot",
-    },
-  },
-  {
-    day: "Saturday",
-    meals: {
-      breakfast: "Firfir, Bread, Tea",
-      lunch: "Rice with Therefore,",
-      dinner: "Shiro, MIsir Wot, Kik Wot",
-    },
-  },
-  {
-    day: "Sunday",
-    meals: {
-      breakfast: "Firfir, Bread, Tea",
-      lunch: "Rice with Therefore,",
-      dinner: "Shiro, MIsir Wot, Kik Wot",
-    },
-  },
-];
+import Color from "../Componets/Color";
+import { menuData } from "../Componets/Data/CampusCafeMenuData";
+import TextCard from "../Componets/TextCard";
 
 const ExpandableItem = ({ item, onToggle, expanded }) => {
   return (
@@ -109,6 +52,10 @@ const CafeMenuScreen = () => {
   );
   return (
     <View style={styles.container}>
+      <TextCard
+        title="Cafe Menu"
+        detail="Welcome to ASTU Students cafe. the menu is liste below"
+      />
       <FlatList
         data={menuData}
         renderItem={renderItem}
@@ -123,7 +70,6 @@ export default CafeMenuScreen;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 50,
     backgroundColor: "#f5f5f5",
   },
   itemContainer: {
@@ -141,15 +87,21 @@ const styles = StyleSheet.create({
   titleText: {
     fontSize: 18,
     fontWeight: "bold",
+    color: Color.primary,
   },
   mealsContainer: {
     marginTop: 10,
+    backgroundColor: "#f1f1f1",
+    padding: 5,
+    borderRadius: 5,
   },
   mealText: {
     fontSize: 16,
     marginVertical: 2,
+    fontStyle: "italic",
   },
   mealType: {
     fontWeight: "bold",
+    fontStyle: "italic",
   },
 });

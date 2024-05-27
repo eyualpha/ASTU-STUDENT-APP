@@ -6,15 +6,8 @@ import {
   FlatList,
 } from "react-native";
 import React, { useState } from "react";
+import { rulesData } from "../Componets/Data/RuleAndRegulationData";
 
-const rulesData = [
-  {
-    id: "1",
-    title: "NO Smoking",
-    description:
-      "Smoking inside the university compound is strictly forbbiden!",
-  },
-];
 const ExpandableItem = ({ item, onToggle, expanded }) => {
   return (
     <View style={styles.itemContainer}>
